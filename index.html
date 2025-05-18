@@ -1,0 +1,1001 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>
+    Tizzy Cloud Email with Responsive Navbar and Animation
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/css/responsive_1.css">
+  <link rel="icon" href="/images/faviconnew.png" sizes="20x20" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a2e0cfb6e5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <script src="/script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+  <div class="relative min-h-screen flex flex-col ">
+    <!-- Top bar -->
+    <div
+      class="flex flex-wrap justify-between items-center border-b border-gray-300 px-4 md:px-8 py-2 text-[13px] text-gray-800 select-none">
+      <div class="flex flex-wrap space-x-4 md:space-x-6 items-center text-[14px] mb-1 md:mb-0 w-full md:w-auto">
+        <a class="hover:underline whitespace-nowrap" href="#">
+          Support
+        </a>
+        <a class="hover:underline whitespace-nowrap" href="#">
+          Partner with us
+        </a>
+        <a class="hover:underline whitespace-nowrap" href="#">
+          Sales Enquiry
+        </a>
+      </div>
+      <div
+        class="flex flex-wrap items-center space-x-2 text-gray-700 text-[13px] w-full md:w-auto justify-start md:justify-end">
+        <i class="fab fa-whatsapp text-[18px]">
+        </i>
+        <span class="whitespace-nowrap">
+          Global Helpline:
+        </span>
+        <a class="text-[#f25125] font-semibold hover:underline whitespace-nowrap" href="tel:+919925992599">
+          +91 9925 9925 99
+        </a>
+        <button
+          class="ml-3 bg-[#f25125] text-white text-[13px] font-semibold rounded-full px-4 py-1.5 hover:bg-blue-700 transition whitespace-nowrap my-account">
+          My Account
+        </button>
+        <a class="ml-2 text-[14px] font-semibold hover:underline whitespace-nowrap my-account" href="#">
+          Sign In
+        </a>
+        <div class="ml-2 relative">
+          <i class="fas fa-shopping-cart text-[20px] cursor-pointer">
+          </i>
+          <span
+            class="absolute -top-2 -right-2 bg-[#f25125] text-white text-[12px] font-semibold rounded-full w-5 h-5 flex items-center justify-center">
+            0
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- Navbar with responsive menu -->
+    <nav class="border-gray-300 px-4 md:px-8 py-2 sticky top-0 bg-white z-50" style="
+    box-shadow: 0px 15px 10px -18px #9d9d9d; text-decoration:none;">
+      <div class="flex items-center justify-between max-w-7xl mx-auto">
+        <a class="flex items-center" href="#">
+          <img alt="Tizzy logo with colorful letters T I Z Z Y" class="h-8 w-auto" height="30"
+            src="/images/tizzy_logo_new.png" width="100" />
+        </a>
+        <button aria-label="Toggle menu" class="md:hidden text-gray-700 focus:outline-none" id="menu-btn">
+          <svg class="w-6 h-6 togglemenu" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round">
+            </path>
+          </svg>
+        </button>
+        <div class="hidden md:flex space-x-6 items-center text-[14px]" id="menu">
+          <a class="text-black hover:underline whitespace-nowrap" href="#">
+            Tizzy Cloud Email
+          </a>
+          <a class="text-black hover:underline whitespace-nowrap" href="#">
+            Tizzy Cloud Hosting
+          </a>
+          <div class="relative group">
+            <button aria-expanded="false" aria-haspopup="true"
+              class="text-black flex items-center space-x-1 hover:underline whitespace-nowrap focus:outline-none"
+              id="desktop-submenu-btn" type="button">
+              <span>
+                Managed Services
+              </span>
+              <i class="fas fa-chevron-down text-[10px]">
+              </i>
+            </button>
+            <div aria-label="Managed Services submenu"
+              class="hidden absolute left-0 mt-1 bg-white border border-gray-300 rounded shadow-md flex-col w-40 z-50"
+              id="desktop-submenu" role="menu">
+              <a class="block text-black hover:underline py-1 px-3" href="#" role="menuitem">
+                Migration
+              </a>
+              <a class="block text-black hover:underline py-1 px-3" href="#" role="menuitem">
+                Backup & Restore
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div class="md:hidden hidden flex-col space-y-2 mt-3 px-2" id="mobile-menu">
+        <a class="block text-black py-1" href="#">
+          Tizzy Cloud Email
+        </a>
+        <a class="block text-black py-1" href="#">
+          Tizzy Cloud Hosting
+        </a>
+        <button aria-controls="mobile-submenu" aria-expanded="false"
+          class="w-full flex justify-between items-center text-black  py-1 focus:outline-none" id="submenu-btn-mobile"
+          type="button">
+          Managed Services
+          <svg class="w-4 h-4 ml-2 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2"
+            viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+            style="width: 50px !important; height: 25px !important;">
+            <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round">
+            </path>
+          </svg>
+        </button>
+        <div aria-label="Managed Services submenu mobile" class="hidden flex-col pl-4 border-l border-gray-300 mt-1"
+          id="mobile-submenu" role="menu">
+          <a class="block text-black py-1" href="#" role="menuitem">
+            Migration </a>
+          <a class="block text-black py-1" href="#" role="menuitem">
+            Backup & Restore
+          </a>
+
+        </div>
+      </div>
+    </nav>
+    
+
+    <!-- Request a Call Back vertical button left side -->
+    <button aria-label="Request a Call Back"
+      class="fixed left-3 top-[55%] bg-[#f25125] text-white text-[15px] font-semibold px-2 py-1 rounded-r-md rotate-[-90deg] origin-left select-none z-50">
+      Request a Call Back
+    </button>
+    <!-- Main content -->
+    <section
+      class="relative flex flex-col md:flex-row items-center justify-between px-4 md:px-16 py-10  bg-white overflow-visible flex-grow hea Mobile-img1">
+      <!-- Left text block -->
+      <div class="md:w-1/2 max-w-lg text-center md:text-left z-10 Mobile-text1">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight text-black">
+          <span class="inline-block relative">
+            <span class="bg-[#f9c0c0] inline-block -skew-x-6 px-1 dynamic-title-gradient">
+              PREMIUM
+            </span>
+
+          </span>
+          <span>
+            Cloud Business
+          </span>
+          <br />
+          <span>
+            Email Hosting
+          </span>
+          <span class="inline-block  font-semibold dynamic-title-gradient">
+            INDIAN
+          </span>
+          <br />
+          <span>
+            Company
+          </span>
+        </h1>
+        <p class="mt-4 text-gray-500 text-[13px] sm:text-[16px] max-w-md mx-auto md:mx-0">
+          Save time of your team and Grow your Business with our world class Faster Cloud Email Service
+        </p>
+        <button
+          class="mt-5 bg-[#f25125] text-white text-[16px] font-semibold rounded-full px-5 py-2 hover:bg-blue-700 transition">
+          Start Now
+        </button>
+        <!-- Partners -->
+        <div
+          class="mt-10 flex flex-wrap justify-center md:justify-start space-x-0 md:space-x-20 items-center gap-6 md:gap-0">
+          <div class="flex items-center space-x-2 min-w-[180px]">
+            <img alt="Google Cloud Partner logo with multicolor cloud icon" class="h-8 w-auto" height="30"
+              src="/images/google-partner.png" width="40" />
+
+          </div>
+          <div class="flex items-center space-x-2 min-w-[180px]">
+            <img alt="Microsoft Solutions Partner logo with colored squares" class="h-8 w-auto" height="30"
+              src="/images/microsoft-partner.png" width="40" />
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Right image block with circles and icons -->
+      <div class="md:w-1/2 relative mt-10 md:mt-0 flex justify-center items-center min-w-[280px] max-w-[590px] w-full">
+        <img src="/images/banner-img.png">
+
+      </div>
+
+
+
+    </section>
+
+    <section class="section promo" aria-label="promo" style="padding-top: 40px;">
+      <div class="container">
+
+
+        <ul class="grid-list">
+
+          <li>
+            <div class="promo-card bg-gray" style="padding-bottom: 30px;">
+
+              <div class="card-icon">
+                <img src="./images/message.gif" width="53" height="28" loading="lazy" alt="Service icon">
+              </div>
+
+              <h3 class="h3 card-title">Email Send/Receive Speed</h3>
+
+              <p class="card-text">
+                Fastest Outlook/Any Email Application Sync Speed
+              </p>
+
+              <a href="#" class="btn-link" style="color: #f25125;">
+                <span class="span">Explore More</span>
+
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </a>
+
+            </div>
+          </li>
+
+          <li>
+            <div class="promo-card bg-gray">
+
+              <div class="card-icon">
+                <img src="/images/diagram.gif" width="43" height="35" loading="lazy" alt="Service icon">
+              </div>
+
+              <h3 class="h3 card-title">Backup and Restore</h3>
+
+              <p class="card-text">
+                Automated 30 days scheduled backup on AWS S3 Bucket
+              </p>
+
+              <a href="#" class="btn-link" style="color: #f25125;">
+                <span class="span">Explore More</span>
+
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </a>
+
+            </div>
+          </li>
+
+          <li>
+            <div class="promo-card bg-gray">
+
+              <div class="card-icon">
+                <img src="/images/shield.gif" width="40" height="40" loading="lazy" alt="Service icon">
+              </div>
+
+              <h3 class="h3 card-title">AWS Security Standards</h3>
+
+              <p class="card-text">
+                AWS Foundational Security Best Practices , CIS AWS Foundations Benchmark & PCI DSS
+              </p>
+
+              <a href="#" class="btn-link" style="color: #f25125;">
+                <span class="span">Explore More</span>
+
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </a>
+
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+
+    <div class="relative z-10 flex justify-center" style="padding-top: 25px;">
+      <button class="bg-[#f25125] text-white font-medium rounded-md px-5 py-3 hover:bg-[#3b56c1] transition"
+        type="button" style="font-size: 16px;">
+        View All
+      </button>
+    </div>
+
+    <section style="padding-top: 40px;">
+
+      <div class=" col-md-12 " style="    display: flex;
+      justify-content: center;
+      align-items: center;">
+        <div class=" col-md-12 " style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ">
+          <div class="">
+            <h2 class="Testimonia">Testimonial</h2>
+            <h2 class="iq-title" style="padding-top: 40px; font-size: 25px; color: #424242; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 36px;
+        ">Some Awesome Words By Our Customers </h2>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-4xl mx-auto p-6 mt-20 border border-gray-200 rounded-lg">
+        <div class="relative min-h-[180px]" id="slides">
+          <!-- Slide 1 -->
+          <div class="absolute inset-0 transition-opacity duration-700 ease-in-out" data-index="0">
+            <p class="text-gray-800 text-base leading-relaxed max-w-3xl">
+              Incoming spam emails are reduced to 60-70%, almost ZERO complaints from
+              our customers, quick response to our emails. All IT companies should
+              offer only Tizzy Mail service to their clients.
+            </p>
+            <div class="flex items-center justify-between mt-8 max-w-3xl">
+              <div class="flex items-center space-x-4">
+                <img alt="Generic user avatar silhouette in blue and gray colors"
+                  class="w-16 h-16 rounded-full bg-gray-200" height="64"
+                  src="https://storage.googleapis.com/a1aa/image/5f688ff4-1df6-4381-a9ba-1b74df22d967.jpg" width="64" />
+                <div>
+                  <h3 class="text-blue-600 font-semibold text-lg leading-tight cursor-pointer hover:underline">
+                    Owner of 22-year-old IT company
+                  </h3>
+                  <p class="text-indigo-400 text-sm font-medium flex items-center space-x-1">
+                    <span>
+                      MUMBAI, INDIA
+                    </span>
+                    <img alt="Indian flag emoji" class="inline-block" height="14" src="/images/india.svg" width="20" />
+                  </p>
+                </div>
+              </div>
+              <div>
+                <img alt="Light blue quotation mark icon" class="w-12 h-12 select-none" height="48" loading="lazy"
+                  src="https://storage.googleapis.com/a1aa/image/0a301ca8-d875-4b3d-23f2-39c10395e162.jpg" width="48">
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none"
+            data-index="1">
+            <p class="text-gray-800 text-base leading-relaxed max-w-3xl">
+              Our existing vendor was not able to solve daily issues related to emails
+              so we were about to migrate all 200 email users to either Google or
+              Microsoft. After trying Tizzy Mail our team was very happy as almost all
+              the issues were solved immediately after activation.
+            </p>
+            <div class="flex items-center justify-between mt-8 max-w-3xl">
+              <div class="flex items-center space-x-4">
+                <img alt="Generic user avatar silhouette in green and gray colors"
+                  class="w-16 h-16 rounded-full bg-gray-200" height="64"
+                  src="https://storage.googleapis.com/a1aa/image/0c3dbadf-7905-4547-07bf-696d5c98b064.jpg" width="64" />
+                <div>
+                  <h3 class="text-blue-600 font-semibold text-lg leading-tight cursor-pointer hover:underline">
+                    IT Manager of leading HR Company
+                  </h3>
+                  <p class="text-indigo-400 text-sm font-medium flex items-center space-x-1">
+                    <span>
+                      MUMBAI, INDIA
+                    </span>
+                    <img alt="Indian flag emoji" class="inline-block" height="14" src="/images/india.svg" width="20" />
+                  </p>
+                </div>
+              </div>
+              <div>
+                <img alt="Light blue quotation mark icon" class="w-12 h-12 select-none" height="48" loading="lazy"
+                  src="https://storage.googleapis.com/a1aa/image/0a301ca8-d875-4b3d-23f2-39c10395e162.jpg" width="48">
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none"
+            data-index="2">
+            <p class="text-gray-800 text-base leading-relaxed max-w-3xl">
+              IP blacklisting issue, UCE Protect level 2 and level 3 listing issues,
+              spamming issues, other DNS related issues all were solved after moving
+              all 350 emails to Tizzy Mail. We always wanted Indian Data Center and
+              with Tizzy Mail all our Email Data is now stored only in India.
+            </p>
+            <div class="flex items-center justify-between mt-8 max-w-3xl">
+              <div class="flex items-center space-x-4">
+                <img alt="Generic user avatar silhouette in purple and gray colors"
+                  class="w-16 h-16 rounded-full bg-gray-200" height="64"
+                  src="https://storage.googleapis.com/a1aa/image/c200e671-5df9-4f66-b863-7c6607056c43.jpg" width="64" />
+                <div>
+                  <h3 class="text-blue-600 font-semibold text-lg leading-tight cursor-pointer hover:underline">
+                    IT Manager of multinational manufacturing <br>
+                    company
+                  </h3>
+                  <p class="text-indigo-400 text-sm font-medium flex items-center space-x-1">
+                    <span>
+                      MUMBAI, INDIA
+                    </span>
+                    <img alt="Indian flag emoji" class="inline-block" height="14" src="/images/india.svg" width="20" />
+                  </p>
+                </div>
+              </div>
+              <div>
+                <img alt="Light blue quotation mark icon" class="w-12 h-12 select-none" height="48" loading="lazy"
+                  src="https://storage.googleapis.com/a1aa/image/0a301ca8-d875-4b3d-23f2-39c10395e162.jpg" width="48">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center space-x-2 mt-10 mb-20">
+        <button aria-label="Slide 1" class="w-5 h-5 rounded-full border-2 border-blue-500 text-white bg-white"
+          data-slide="0">
+        </button>
+        <button aria-label="Slide 2" class="w-5 h-5 rounded-full bg-blue-500 border-2 border-blue-500" data-slide="1">
+        </button>
+        <button aria-label="Slide 3" class="w-5 h-5 rounded-full bg-blue-500 border-2 border-blue-500" data-slide="2">
+        </button>
+      </div>
+      <script>
+        (() => {
+          const slides = document.querySelectorAll("#slides > div");
+          const buttons = document.querySelectorAll("[data-slide]");
+          let current = 0;
+          let interval = null;
+
+          function showSlide(index) {
+            slides.forEach((slide, i) => {
+              if (i === index) {
+                slide.classList.remove("opacity-0", "pointer-events-none");
+                slide.classList.add("opacity-100", "relative");
+              } else {
+                slide.classList.add("opacity-0", "pointer-events-none");
+                slide.classList.remove("opacity-100", "relative");
+              }
+            });
+
+            buttons.forEach((btn, i) => {
+              if (i === index) {
+                btn.classList.remove("bg-white", "text-white");
+                btn.classList.add("bg-blue-500", "border-blue-500");
+              } else {
+                btn.classList.remove("bg-blue-500", "border-blue-500");
+                btn.classList.add("bg-white", "text-white", "border-blue-500");
+              }
+            });
+
+            current = index;
+          }
+
+          function nextSlide() {
+            let next = current + 1;
+            if (next >= slides.length) next = 0;
+            showSlide(next);
+          }
+
+          buttons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+              clearInterval(interval);
+              showSlide(parseInt(btn.dataset.slide));
+              interval = setInterval(nextSlide, 4000);
+            });
+          });
+
+          // Initialize
+          showSlide(0);
+          interval = setInterval(nextSlide, 4000);
+
+          // Responsive: adjust min height of slides container based on content height
+          function adjustHeight() {
+            const slidesContainer = document.getElementById("slides");
+            let maxHeight = 0;
+            slides.forEach((slide) => {
+              slide.style.position = "relative";
+              slide.style.opacity = "1";
+              slide.style.pointerEvents = "auto";
+              const h = slide.offsetHeight;
+              if (h > maxHeight) maxHeight = h;
+              slide.style.position = "";
+              slide.style.opacity = "";
+              slide.style.pointerEvents = "";
+            });
+            slidesContainer.style.minHeight = maxHeight + "px";
+          }
+          window.addEventListener("load", adjustHeight);
+          window.addEventListener("resize", adjustHeight);
+        })();
+      </script>
+
+    </section>
+
+
+    <section class="pricing-section text-center">
+      <div class="container">
+        <h2 class="mb-5 fw-bold" style="font-size: 30px;">
+          Tizzy® Cloud Business Email <span class="text">Hosting Plans</span>
+        </h2>
+
+        <div class="row" id="plans-container" style="
+    justify-content: center;
+">
+          <!-- JS will inject plans here -->
+        </div>
+
+        <div class="mt-4">
+          <a href="/email-hosting/tizzy-mail" class="btn btn-primary ">View All Plans</a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const plans = [
+        {
+          title: "Tizzy® Mail Basic 10 GB",
+          icon: "images/mailing.svg",
+          price: 792,
+          renew: 792,
+          gst: true,
+          features: [
+            "Space per Email ID 10 GB",
+            "User Friendly Webmail Access",
+            "Email Client Setup",
+            "Mobile Webmail",
+            "50 GB Data Transfer Bandwidth Per Month",
+            "150 Outgoing Emails Limit Per Hour"
+          ]
+        },
+        {
+          title: "Tizzy® Mail Corporate 1 TB",
+          icon: "images/email-marketing.png",
+          price: 8000,
+          renew: 8000,
+          gst: true,
+          features: [
+            "Space per Email ID 1 TB",
+            "User Friendly Webmail Access",
+            "Email Client Setup",
+            "Mobile Webmail",
+            "300 GB Data Transfer Bandwidth Per Month",
+            "250 Outgoing Emails Limit Per Hour"
+          ]
+        }
+      ];
+
+      const container = document.getElementById('plans-container');
+
+      plans.forEach((plan, index) => {
+        const card = document.createElement('div');
+        card.className = "col-md-6 col-lg-4 mb-4";
+
+        card.innerHTML = `
+      <div class="pricing-card p-4 h-100">
+        <img src="${plan.icon}" alt="${plan.title}" class="icon-img d-block mx-auto mb-3"style="
+    width: 100px;
+">
+        <h4>${plan.title}</h4>
+        <div class="price mb-1">₹${plan.price} <span class="fs-6 text-muted">/User/Year</span></div>
+        <p class="text-muted mb-1">Renews at ₹${plan.renew}</p>
+        <p class="text-muted mb-3">${plan.gst ? "GST 18% Additional" : ""}</p>
+        <div class="toggle-btn" onclick="toggleFeatures(${index})">View Details</div>
+        <ul class="features list-unstyled text-start mt-2" id="features-${index}">
+          ${plan.features.map(f => `<li>• ${f}</li>`).join('')}
+        </ul>
+      </div>
+    `;
+        container.appendChild(card);
+      });
+
+      function toggleFeatures(index) {
+        const featureList = document.getElementById(`features-${index}`);
+        featureList.style.display = featureList.style.display === 'block' ? 'none' : 'block';
+      }
+    </script>
+
+
+
+
+    <section class="py-5 emailimg" style="background-color: #fff9c4;">
+      <div class="container text-center">
+        <div class="row align-items-center">
+          <div class="col-md-2 d-none d-md-block">
+
+          </div>
+
+          <div class="col-md-8 col-12">
+            <div>
+              <h4 class="featuremail mb-3">Features of Tizzy®Mail</h4>
+            </div>
+            <div class="p-2">
+              <p>Tizzy Mail can be setup in automatic or manual mode on any device and in any email application.<br>
+                It also has a user friendly Webmail Interface to access from browser.<br>
+                Creating your business email address is very fast and easy on Tizzy®Mail for eg.<br>
+                <strong>sales@YourCompanyName.com</strong>
+              </p>
+            </div>
+            <div class="p-3"> <a href="#plans" class="btn btn-outline-primary mt-3 text iq-buttons">View plans</a></div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container py-5">
+        <!-- <h2 class="text-center mb-4">Tizzy® Email Hosting Features</h2> -->
+
+        <!-- Tabs -->
+        <div class="row border rounded shadow-sm">
+          <div class="col-md-4 mb-3 tabb2">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+              <button class="nav-link active" id="tab1-tab" data-bs-toggle="pill" data-bs-target="#tab1"
+                role="tab">Faster Desktop and Mobile Webmail</button>
+              <button class="nav-link" id="tab2-tab" data-bs-toggle="pill" data-bs-target="#tab2" role="tab">Faster POP,
+                IMAP and SMTP
+                Protocols</button>
+              <button class="nav-link" id="tab3-tab" data-bs-toggle="pill" data-bs-target="#tab3" role="tab">Integrated
+                Spam, Antivirus
+                and Email Filtering</button>
+              <button class="nav-link" id="tab4-tab" data-bs-toggle="pill" data-bs-target="#tab4" role="tab">DNS
+                Management</button>
+              <button class="nav-link" id="tab5-tab" data-bs-toggle="pill" data-bs-target="#tab5" role="tab">Dedicated
+                Control
+                Panel</button>
+              <button class="nav-link" id="tab6-tab" data-bs-toggle="pill" data-bs-target="#tab6" role="tab"> SSL/TLS
+                Security</button>
+            </div>
+          </div>
+
+          <div class="col-md-8" style="padding:40px;">
+            <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                <div class="card" style="border: none;display: flex;justify-content: center;align-items: center;">
+                  <h4 class="sum">Faster Desktop and Mobile Webmail</h4>
+                  <p>
+                    New Faster and Improved User-Friendly Webmail Interface.
+                    Fully Indexed Search engine returns results almost immediately.
+                    Forgot Password Feature, Skin or Layout change and much more is
+                    available in our latest Webmail version.
+                  </p>
+                  <img src="images/webmail.png" class="feature-img" alt="Webmail">
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab2" role="tabpanel">
+                <div class="card" style="border: none;display: flex;justify-content: center;align-items: center;">
+                  <h4 class="sum">Faster POP, IMAP and SMTP Protocols</h4>
+                  <p> Auto discovery setup in all Email Clients like Outlook, Thunderbird etc.
+                    Faster Send/Receive or Sync of emails/folders.
+                    Sending emails with attachments is fast so delivery
+                    time of email to recipient inbox is also much shorter.</p>
+                  <img src="images/fast.png" class="feature-img" alt="Fast Email">
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab3" role="tabpanel">
+                <div class="card" style="border: none;display: flex;justify-content: center;align-items: center;">
+                  <h4 class="sum">Integrated Spam, Antivirus and Email Filtering</h4>
+                  <p> Filtering based on Reverse DNS Blacklisting, PTR DNS Record,
+                    DKIM, Greylisting, SPF, URL Blacklisting, Third Party Antivirus Scanner,
+                    IP Blacklisting, Domain Blacklisting or Email Address
+                    Blacklisting and Detecting/Blocking Abuse/Attacks.</p>
+                  <img src="images/spam.png" class="feature-img" alt="Spam Filter">
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab4" role="tabpanel">
+                <div class="card" style="border: none;display: flex;justify-content: center;align-items: center;">
+                  <h4 class="sum">DNS Management</h4>
+                  <p> Managing DNS with all required records to make sure there
+                    is no warning or error shown when checking the overall Email Health for the
+                    domain.
+                    Email sent from such DNS of a
+                    Domain results in inbox delivery within seconds of sending it.</p>
+                  <img src="images/DNS.png" class="feature-img" alt="DNS">
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab5" role="tabpanel">
+                <div class="card" style="border: none;display: flex;justify-content: center;align-items: center;">
+                  <h4 class="sum">Dedicated Control Panel</h4>
+                  <p> Its very easy to manage your Email Accounts in few clicks.
+                    The IT manager of your company can now create, edit features or
+                    delete any of the Email Account in no time.
+                    You can update password or disable webmail and do lot more with various
+                    features.</p>
+                  <img src="images/plesk.png" class="feature-img" alt="Control Panel">
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab6" role="tabpanel">
+                <div class="card" style="border: none;display: flex;justify-content: center;align-items: center;">
+                  <h4 class="sum">SSL/TLS Security</h4>
+                  <p> SSL and TLS Encryption is enabled for both incoming and outgoing
+                    emails. For incoming email you can set SSL and for Outgoing you can set TLS
+                    as Security
+                    Type while setting up your
+                    emails with any of Email Client like Outlook, Thunderbird etc.</p>
+                  <img src="images/security.png" class="feature-img" alt="Security">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+   
+      <!-- FAQ Section Start -->
+      <section class="faq-area py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold pb-2">Frequently <span class="text-primary">Asked Questions</span></h2>
+            <div class="rating">
+            </div>
+            <p class="text-muted pt-3">
+              We are glad to answer the frequently asked questions. You can email us on <br>
+              <a href="mailto:sales@tizzycloud.com">sales@tizzycloud.com</a> for any further queries.
+            </p>
+          </div>
+
+          <!-- FAQ question code -->
+          <div class="faq-container" id="faq1">
+            <div class="faq-question" onclick="toggleFAQ('faq1')">
+              1) What is Cloud Business Email Hosting Service?
+              <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Ans. Cloud Email Hosting is a service setup on Cloud Computing Environment. Cloud enables high availability or uptime of service along with safety and security of stored data. Backup and disaster recovery is very fast on Cloud servers.</p>
+            </div>
+          </div>
+
+          <div class="faq-container" id="faq2">
+            <div class="faq-question" onclick="toggleFAQ('faq2')">
+              2) What is Tizzy®Mail?
+              <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Ans. Tizzy®Mail is a Cloud Business Email Hosting solution provided by Tizzy®Cloud, hosted on advanced
+                cloud infrastructure.</p>
+            </div>
+          </div>
+          <div class="faq-container" id="faq3">
+            <div class="faq-question" onclick="toggleFAQ('faq3')">
+              3) How old is Tizzy®Mail?
+              <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Ans. Tizzy®Mail has been growing for over 7 years with thousands of users across small and large
+                corporations.</p>
+            </div>
+          </div>
+          <div class="faq-container" id="faq4">
+            <div class="faq-question" onclick="toggleFAQ('faq4')">
+              4) How do we migrate to Tizzy®Mail?
+              <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Ans. Migration is simple. Our technical team will assist you in moving your existing email services and
+                data to Tizzy®Mail.</p>
+            </div>
+          </div>
+          <div class="faq-container" id="faq5">
+            <div class="faq-question" onclick="toggleFAQ('faq5')">
+              5) How to renew the services next year?
+              <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Ans. You’ll receive email notifications 7 days before expiry. Simply reply and complete the payment as per
+                the invoice to renew.</p>
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+
+    <footer class="footer">
+      <div class="text-center mb-4">
+        <h5 class="cin">Activate your services with Tizzy® Cloud</h5>
+        <button class="btn btn-primary mt-2 cin">Join The Tizzy Mail Revolution Now</button>
+        <p class="mt-2 cin">CIN: U72200MH2018PTC307932</p>
+      </div>
+      <hr class="mx-auto" style="width: 93%;" />
+
+      <div class="container">
+        <div class="row text-start">
+         
+          <!-- Logo & Description -->
+          <div class="col-md-4 mb-4">
+            <img class="fotterimage" src="./images/tizzy_logo_new.png" alt="Tizzy Logo" height="40" />
+            <p class="company-desc mt-2">Tizzy Cloud is a team of enthusiastic techies specialized in Cloud Computing
+              services. Since inception we are focused on educating rather than just selling services.</p>
+            <div class="certifications mt-3">
+              <img src="./images/iso.png" alt="ISO" />
+              <img src="./images/back.png" alt="Money Back" />
+              <img src="./images/free.png" alt="Free Trial" />
+            </div>
+          </div>
+       
+        <div class="col-md-8 footer-text">
+          <!-- Link Groups -->
+          <div class="col-md-4 mb-4">
+            <ul class="footer-links">
+              <li><a href="#">About Tizzy</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Media</a></li>
+              <li><a href="#">Legal</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <ul class="footer-links">
+              <li><a href="#">Tizzy Mail</a></li>
+              <li><a href="#">Tizzy Cloud</a></li>
+              <li><a href="#">Google Workspace</a></li>
+              <li><a href="#">Microsoft 365</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <ul class="footer-links">
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Migration</a></li>
+              <li><a href="#">Backup & Restore</a></li>
+              <li><a href="#">Career</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+        <!-- Social Media -->
+        <div class="text-center mt-3 social-icons" style="float: right;margin-right: 65px;">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-google"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    - #GO TO TOP
+  -->
+
+
+    <!-- Go to Top Button -->
+    <a href="#top" class="go-top" data-go-top title="Go to Top">
+      ↑
+    </a>
+
+    <script>
+      const goTopBtn = document.querySelector("[data-go-top]");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY >= 500) {
+          goTopBtn.classList.add("active");
+        } else {
+          goTopBtn.classList.remove("active");
+        }
+      });
+    </script>
+
+<script>
+  // Toggle main mobile menu
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Toggle mobile submenu
+  const submenuBtnMobile = document.getElementById('submenu-btn-mobile');
+  const mobileSubmenu = document.getElementById('mobile-submenu');
+  const mobileArrow = submenuBtnMobile.querySelector('svg');
+
+  submenuBtnMobile.addEventListener('click', () => {
+    mobileSubmenu.classList.toggle('hidden');
+    mobileArrow.classList.toggle('rotate-180');
+  });
+
+  // Desktop dropdown hover toggle
+  const desktopSubmenuBtn = document.getElementById('desktop-submenu-btn');
+  const desktopSubmenu = document.getElementById('desktop-submenu');
+  const desktopParent = desktopSubmenuBtn.parentElement;
+
+  desktopParent.addEventListener('mouseenter', () => {
+    desktopSubmenu.classList.remove('hidden');
+  });
+
+  desktopParent.addEventListener('mouseleave', () => {
+    desktopSubmenu.classList.add('hidden');
+  });
+</script>
+
+     <!-- <script>
+      const sliderBarInner = document.getElementById('sliderBarInner');
+      const dots = document.querySelectorAll('button[data-index]');
+      const widths = ['33.33%', '66.66%', '100%'];
+      const testimonials = [
+        `IP blacklisting issue, UCE Protect level 2 and level 3 listing issues, spamming issues, other DNS related issues all were solved after moving all 350 emails to Tizzy Mail. We always wanted Indian Data Center and with Tizzy Mail all our Email Data is now stored only in India.`,
+        `Second testimonial text goes here. It can be different content describing customer feedback or experience.`,
+        `Third testimonial text goes here. Another customer feedback or experience can be placed here.`
+      ];
+      const title = document.querySelector('.text-blue-500.font-semibold');
+      const locationText = document.querySelector('.text-indigo-300 span');
+      const sliderText = document.querySelector('p.text-gray-800');
+      const userImage = document.querySelector('img[alt^="User icon"]');
+      const quoteIcon = document.querySelector('img[alt="Light blue quotation mark icon"]');
+      const flags = [
+        "https://storage.googleapis.com/a1aa/image/4e546bc8-f82d-4d44-af11-f3e3db7e8afd.jpg",
+        "https://placehold.co/16x12?text=F2&bg=93c5fd&txtclr=1e40af",
+        "https://placehold.co/16x12?text=F3&bg=bfdbfe&txtclr=1e3a8a"
+      ];
+      const userImages = [
+        "https://storage.googleapis.com/a1aa/image/476ff589-2227-4cbe-f268-ec55b5ba3a5a.jpg",
+        "https://placehold.co/48x48?text=U2&bg=bfdbfe&txtclr=1e40af",
+        "https://placehold.co/48x48?text=U3&bg=93c5fd&txtclr=1e3a8a"
+      ];
+      const titles = [
+        "IT Manager of multinational manufacturing company",
+        "Marketing Head of global retail brand",
+        "CEO of innovative tech startup"
+      ];
+      const locations = [
+        "MUMBAI, INDIA",
+        "DELHI, INDIA",
+        "BENGALURU, INDIA"
+      ];
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const index = parseInt(dot.getAttribute('data-index'));
+          sliderBarInner.style.width = widths[index];
+          sliderText.textContent = testimonials[index];
+          title.textContent = titles[index];
+          locationText.textContent = locations[index];
+          userImage.src = userImages[index];
+          userImage.alt = `User icon silhouette in a circle with light blue background for testimonial ${index + 1}`;
+          quoteIcon.src = "https://storage.googleapis.com/a1aa/image/0a301ca8-d875-4b3d-23f2-39c10395e162.jpg";
+          // Update dots styling
+          dots.forEach(d => {
+            d.classList.remove('border-2', 'border-blue-300');
+            d.classList.remove('bg-blue-500');
+            d.classList.add('bg-blue-500');
+          });
+          dot.classList.remove('bg-blue-500');
+          dot.classList.add('border-2', 'border-blue-300');
+        });
+      });
+    </script> -->
+
+
+
+
+
+  </div>
+  <!-- <script>
+    // Toggle mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const submenuBtn = document.getElementById('submenu-btn');
+    const submenu = document.getElementById('submenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    submenuBtn.addEventListener('click', () => {
+      const expanded = submenuBtn.getAttribute('aria-expanded') === 'true';
+      submenuBtn.setAttribute('aria-expanded', !expanded);
+      submenu.classList.toggle('hidden');
+      // Rotate arrow
+      const svg = submenuBtn.querySelector('svg');
+      if (!expanded) {
+        svg.classList.add('rotate-180');
+      } else {
+        svg.classList.remove('rotate-180');
+      }
+    });
+
+    // Array of images for animation swap
+    const images = [
+      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=280&q=80",
+      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=280&q=80",
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=280&q=80"
+    ];
+    let currentIndex = 0;
+    const mainImage = document.getElementById('mainWomanImage');
+
+    function changeImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      mainImage.style.opacity = 0;
+      setTimeout(() => {
+        mainImage.src = images[currentIndex];
+        mainImage.style.opacity = 1;
+      }, 500);
+    }
+
+    setInterval(changeImage, 5000);
+  </script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
