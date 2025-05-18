@@ -64,7 +64,7 @@ body {
 
 
   .hea{
-    background-image: url(/images/home-banner.png);
+    background-image: url(./images/home-banner.png);
   }
 
   .h-8 {
@@ -235,7 +235,7 @@ body {
   }
 
   .emailimg{
-    background: url(/images/feature-mail-1.jpg) no-repeat 0 0 ;
+    background: url(./images/feature-mail-1.jpg) no-repeat 0 0 ;
     background-size: cover;
     background-attachment: fixed;
 
